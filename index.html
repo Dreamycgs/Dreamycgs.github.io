@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的作品集</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            background: #1b1b1b;
+        }
+
+        .blog_home{
+            left: 50px;
+            top: 40px;
+            position: absolute;
+        }
+
+        .main{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            overflow: scroll;
+        }
+
+        .container{
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .title{
+            text-align: center;
+            font-size: 48px;
+            font-weight: 100;
+            margin-top: 120px;
+            line-height: 1;
+            color: #A1A2AA;
+        }
+
+        .desc {
+            font-size: 17px;
+            font-weight: 200;
+            margin-top: 60px;
+            line-height: 1.5;
+            color: #818288;
+        }
+
+         .secdonary {
+            font-size: 15px;
+            font-weight: 300;
+            margin-top: 10px;
+            line-height: 1.5;
+            color: #717277;
+        }
+
+        .profile_imagefirst{
+            display: block;
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        .profile_image{
+            display: block;
+            width: 100%;
+            margin-top: 5px ;
+        }
+
+        .loading{
+            position: absolute;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            background: #ffffff;
+        }
+
+        .loading_container{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .loading_tip{
+            margin-top: 20px;
+            color: #c1c2cc;
+            letter-spacing: 1.5px;
+            font-size: 16px;
+        }
+
+        .hide {
+            transition: all 2s ease-in-out;
+            -webkit-transition: all 2s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+
+        }
+
+        @media screen and (min-width: 1400px){
+            .container{
+                width: 1400px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h1 class="title">MY Profile 2016-2020</h1>
+            <p class="desc">每走一段路，回看都是美不胜收的景，无论是嬉笑或遗憾。挑选部分经历记录自己的成长，然后期待更好的挑战。</p>
+            <p class="secdonary">（烦请在PC端观看，方能获得最佳体验）</p>
+            <img class="profile_imagefirst" src="./image/imge1.jpg" alt="profile01" onload="onFirstImageLoaded()">
+            <img class="profile_image" src="./image/imge2.jpg" alt="profile02">
+            <img class="profile_image" src="./image/imge3.jpg" alt="profile03">
+            <img class="profile_image" src="./image/imge4.jpg" alt="profile04">
+            <img class="profile_image" src="./image/imge5.jpg" alt="profile05">
+            <img class="profile_image" src="./image/imge6.jpg" alt="profile06">
+            <img class="profile_image" src="./image/imge7.jpg" alt="profile07">
+            <img class="profile_image" src="./image/imge8.jpg" alt="profile08">
+            <img class="profile_image" src="./image/imge9.jpg" alt="profile09">
+            <img class="profile_image" src="./image/imge10.jpg" alt="profile10">
+            <img class="profile_image" src="./image/imge11.jpg" alt="profile11">
+            <img class="profile_image" src="./image/imge12.jpg" alt="profile12">
+            <img class="profile_image" src="./image/imge13.jpg" alt="profile13">
+            <img class="profile_image" src="./image/imge14.jpg" alt="profile14">
+            <img class="profile_image" src="./image/imge15.jpg" alt="profile15">
+            <img class="profile_image" src="./image/imge16.jpg" alt="profile16">
+            <img class="profile_image" src="./image/imge17.jpg" alt="profile17">
+            <img class="profile_image" src="./image/imge18.jpg" alt="profile18">
+            <img class="profile_image" src="./image/imge19.jpg" alt="profile19">
+            <img class="profile_image" src="./image/imge20.jpg" alt="profile20">
+            <img class="profile_image" src="./image/imge21.jpg" alt="profile21">
+            <img class="profile_image" src="./image/imge22.jpg" alt="profile22">
+            <img class="profile_image" src="./image/imge23.jpg" alt="profile23">
+            <img class="profile_image" src="./image/imge24.jpg" alt="profile24">
+            <img class="profile_image" src="./image/imge25.jpg" alt="profile25">
+            <img class="profile_image" src="./image/imge26.jpg" alt="profile26">
+            <img class="profile_image" src="./image/imge27.jpg" alt="profile27">
+            <img class="profile_image" src="./image/imge28.jpg" alt="profile28">
+            <img class="profile_image" src="./image/imge29.jpg" alt="profile29">
+            <img class="profile_image" src="./image/imge30.jpg" alt="profile30">
+            <img class="profile_image" src="./image/imge31.jpg" alt="profile31">
+            <img class="profile_image" src="./image/imge32.jpg" alt="profile32">
+            <img class="profile_image" src="./image/imge33.jpg" alt="profile33">
+            <img class="profile_image" src="./image/imge34.jpg" alt="profile34">
+            <img class="profile_image" src="./image/imge35.jpg" alt="profile35">
+            <img class="profile_image" src="./image/imge36.jpg" alt="profile36">
+            <img class="profile_image" src="./image/imge37.jpg" alt="profile37">
+            <img class="profile_image" src="./image/imge38.jpg" alt="profile38">
+            <img class="profile_image" src="./image/imge39.jpg" alt="profile39">
+            <img class="profile_image" src="./image/imge40.jpg" alt="profile40">
+            <img class="profile_image" src="./image/imge41.jpg" alt="profile41">
+            <img class="profile_image" src="./image/imge42.jpg" alt="profile42">
+            <img class="profile_image" src="./image/imge43.jpg" alt="profile43">
+            <img class="profile_image" src="./image/imge44.jpg" alt="profile44">
+            <img class="profile_image" src="./image/imge45.jpg" alt="profile45">
+            <img class="profile_image" src="./image/imge46.jpg" alt="profile46">
+            <img class="profile_image" src="./image/imge47.jpg" alt="profile47">
+            <img class="profile_image" src="./image/imge48.jpg" alt="profile48">
+            <img class="profile_image" src="./image/imge49.jpg" alt="profile49">
+            <img class="profile_image" src="./image/imge50.jpg" alt="profile50">
+            <img class="profile_image" src="./image/imge51.jpg" alt="profile51">
+            <img class="profile_image" src="./image/imge52.jpg" alt="profile52">
+            <img class="profile_image" src="./image/imge53.jpg" alt="profile53">
+            <img class="profile_image" src="./image/imge54.jpg" alt="profile54">
+            <img class="profile_image" src="./image/imge55.jpg" alt="profile55">
+            <img class="profile_image" src="./image/imge56.jpg" alt="profile56">
+            <img class="profile_image" src="./image/imge57.jpg" alt="profile57">
+        </div>
+    </div>
+
+    <div class="blog_home">
+        <a href="http://my.cgsdream.org" rel="博客">
+            <img src="./image/img_logo_dark.png" width="44px" />
+        </a>
+    </div>
+
+    <div class="loading" id="loading">
+        <div class="loading_container">
+            <img src="./image/logo.png" alt="">
+            <span class="loading_tip">茶很快就满上，请稍候...</span>
+        </div>
+    </div>
+
+    <script>
+        function onFirstImageLoaded() {
+            setTimeout(function () {
+                var loading = document.getElementById("loading")
+                loading.classList.add("hide")
+            }, 200)
+        }
+
+    </script>
+</body>
+</html>
