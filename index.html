@@ -15,10 +15,25 @@
             background: #1b1b1b;
         }
 
+        a {
+            cursor: pointer;
+        }
+
+        .loading_log{
+            width: 160px;
+            height: 120px;
+            background-image: url("./image/logo.png");
+            background-size: 160px 120px;
+        }
+
         .blog_home{
             left: 50px;
             top: 40px;
             position: absolute;
+            width: 44px;
+            height: 31px;
+            background-image: url("./image/img_logo_dark.png");
+            background-size: 44px 31px;
         }
 
         .main{
@@ -63,16 +78,14 @@
             color: #717277;
         }
 
-        .profile_imagefirst{
-            display: block;
-            width: 100%;
-            margin-top: 30px;
-        }
-
         .profile_image{
             display: block;
             width: 100%;
             margin-top: 5px ;
+        }
+
+        .profile_image:first-child{
+            margin-top: 30px;
         }
 
         .loading{
@@ -125,7 +138,7 @@
             <h1 class="title">MY Profile 2016-2020</h1>
             <p class="desc">每走一段路，回看都是美不胜收的景，无论是嬉笑或遗憾。挑选部分经历记录自己的成长，然后期待更好的挑战。</p>
             <p class="secdonary">（烦请在PC端观看，方能获得最佳体验）</p>
-            <img class="profile_imagefirst" src="./image/imge1.jpg" alt="profile01" onload="onFirstImageLoaded()">
+            <img class="profile_image" src="./image/imge1.jpg" alt="profile01">
             <img class="profile_image" src="./image/imge2.jpg" alt="profile02">
             <img class="profile_image" src="./image/imge3.jpg" alt="profile03">
             <img class="profile_image" src="./image/imge4.jpg" alt="profile04">
@@ -185,25 +198,29 @@
         </div>
     </div>
 
-    <div class="blog_home">
-        <a href="http://my.cgsdream.org" rel="博客">
-            <img src="./image/img_logo_dark.png" width="44px" />
-        </a>
-    </div>
+    <a class="blog_home" href="http://my.cgsdream.org" rel="博客"></a>
 
     <div class="loading" id="loading">
         <div class="loading_container">
-            <img src="./image/logo.png" alt="">
+            <div class="loading_log"></div>
             <span class="loading_tip">茶很快就满上，请稍候...</span>
         </div>
     </div>
 
     <script>
-        function onFirstImageLoaded() {
-            setTimeout(function () {
-                var loading = document.getElementById("loading")
+        function imgLoaded(imgElement) {
+            return imgElement.complete && imgElement.naturalHeight !== 0;
+        }
+
+        var firstImage = document.getElementsByClassName("profile_image")[0]
+        var loading = document.getElementById("loading")
+
+        if(imgLoaded(firstImage)){
+            loading.classList.add("hide")
+        }else{
+            firstImage.onload = function () {
                 loading.classList.add("hide")
-            }, 200)
+            }
         }
 
     </script>
