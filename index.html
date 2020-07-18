@@ -195,7 +195,7 @@
             if ('loading' in HTMLImageElement.prototype) {
                 for(var i=0; i < imageCount; i++){
                     var image = createImage(i, imageWidth, imageHeight)
-                    image.src = "./image/imge" + (i+1) + ".jpg";
+                    image.src = "./image/imge" + (i+1) + ".jpg?v=" + version;
                     if(i > 1){
                         image.loading = "lazy";
                     }
