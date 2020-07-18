@@ -160,7 +160,7 @@
     </div>
 
     <script>
-
+        var version = 1;
         var loading = document.getElementById("loading");
         var imageContainer = document.getElementById("image_container");
         var imageCount = 57
@@ -207,9 +207,9 @@
                 for(var i=0; i < imageCount; i++){
                     var image = createImage(i, imageWidth, imageHeight)
                     if(i <= 1){
-                        image.src = "./image/imge" + (i+1) + ".jpg";
+                        image.src = "./image/imge" + (i+1) + ".jpg?v=" + version;
                     }else{
-                        image.setAttribute("data-src", "./image/imge" + (i+1) + ".jpg");
+                        image.setAttribute("data-src", "./image/imge" + (i+1) + ".jpg?v=" + version);
                         image.classList.add("lazyload")
                     }
                     imageContainer.appendChild(image);
